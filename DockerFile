@@ -8,7 +8,7 @@ RUN apt-get -y update
 RUN apt-get -y install vim
 RUN apt-get -y install libglib2.0-0 libsm6 libxrender1 libfontconfig1
 RUN conda create -n py2 -y python=2 ipykernel anaconda ipython jsonschema scipy notebook pandas matplotlib jupyter numpy scikit-learn seaborn
-RUN conda run -n py2 -- ipython kernel install
+RUN /bin/bash -c "source activate py2 && ipython kernel install --display-name py2 --name py2 && source deactivate"
 RUN conda install anaconda ipython jsonschema scipy notebook pandas matplotlib jupyter numpy scikit-learn seaborn
 RUN pip install psutil
 RUN pip install ipywidgets
