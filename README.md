@@ -5,7 +5,7 @@ Instructions are for Mac users. May be different using other operating systems.
 
 Pull with
 `docker pull colinsvds/jupyterhub-nbextensions-docker`
-If you want to mount a volume or do anything else witht he filesystem other than just run jupyterhub, run it with:
+If you want to mount a volume or do anything else with the filesystem (like install extra packages) other than just run jupyterhub, run it with:
 
 `docker run -it -p 8000:8000 colinsvds/jupyterhub-nbextensions-docker bash`
 
